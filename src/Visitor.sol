@@ -55,51 +55,43 @@ contract Visitor is IERC721 {
     }
 
     function safeTransferFrom(
-        address from,
-        address to,
-        uint256 tokenId,
-        bytes calldata data
-    ) external {
+        address,
+        address,
+        uint256,
+        bytes calldata
+    ) external pure {
         revert CannotTransfer();
     }
 
     function safeTransferFrom(
-        address from,
-        address to,
-        uint256 tokenId
-    ) external {
+        address,
+        address,
+        uint256
+    ) external pure {
         revert CannotTransfer();
     }
 
     function transferFrom(
-        address from,
-        address to,
-        uint256 tokenId
-    ) external {
+        address,
+        address,
+        uint256
+    ) external pure {
         revert CannotTransfer();
     }
 
-    function approve(address to, uint256 tokenId) external {
+    function approve(address, uint256) external pure {
         revert CannotApprove();
     }
 
-    function setApprovalForAll(address operator, bool _approved) external {
+    function setApprovalForAll(address, bool) external pure {
         revert CannotApprove();
     }
 
-    function getApproved(uint256 tokenId)
-        external
-        view
-        returns (address operator)
-    {
+    function getApproved(uint256) external pure returns (address) {
         return address(0);
     }
 
-    function isApprovedForAll(address owner, address operator)
-        external
-        view
-        returns (bool)
-    {
+    function isApprovedForAll(address, address) external pure returns (bool) {
         return false;
     }
 
@@ -144,7 +136,7 @@ contract Visitor is IERC721 {
         return _tokenId;
     }
 
-    function supportsInterface(bytes4 interfaceId) public view returns (bool) {
+    function supportsInterface(bytes4 interfaceId) public pure returns (bool) {
         return interfaceId == type(IERC721).interfaceId;
     }
 
