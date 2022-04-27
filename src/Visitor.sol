@@ -143,11 +143,18 @@ contract Visitor is IERC721 {
     function buildURI(uint256 tokenId) private view returns (string memory) {
         return
             string.concat(
-                '{"name": "Visitor #',
-                tokenId.toString(),
-                '", "description": "An NFT for visiting alt.ug", "image": "data:image/svg+xml;base64,',
-                Base64.encode(bytes(buildSVG(tokenId))),
-                '"}'
+                "data:application/json;base64,",
+                Base64.encode(
+                    bytes(
+                        string.concat(
+                            '{"name": "Visitor #',
+                            tokenId.toString(),
+                            '", "description": "An NFT for visiting alt.ug", "image": "data:image/svg+xml;base64,',
+                            Base64.encode(bytes(buildSVG(tokenId))),
+                            '"}'
+                        )
+                    )
+                )
             );
     }
 
