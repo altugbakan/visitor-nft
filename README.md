@@ -5,7 +5,7 @@
         <img src="https://user-images.githubusercontent.com/43248015/165373746-129af041-ae7c-4a4d-8e0e-50c8dc711a78.svg" alt="Visitor NFTs">
     </a>
     <h3>Contract for the <a href="https://alt.ug">alt.ug Visitor NFT</a><h3>
-    <h3> <a href=https://polygonscan.com/address/0x5230d2Ca0A6BBd31C8E30987e9b4e3afacF90d1f>0x5230d2Ca0A6BBd31C8E30987e9b4e3afacF90d1f</a> on Polygon Chain</h3>
+    <h3> <a href=https://optimistic.etherscan.io/address/0x047f3ba5a5550453aca5501c3eceef47019f9477>0x047f3ba5a5550453aca5501c3eceef47019f9477</a> on Optimism</h3>
 </div>
 <br />
 
