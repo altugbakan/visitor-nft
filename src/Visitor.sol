@@ -136,7 +136,17 @@ contract Visitor is IERC721 {
         return _tokenId;
     }
 
-    function supportsInterface(bytes4 interfaceId) public pure returns (bool) {
+    function tokenOf(address owner) external view returns (uint256) {
+        uint256 token = tokens[owner];
+        if (token == 0) revert InvalidToken();
+        return token;
+    }
+
+    function supportsInterface(bytes4 interfaceId)
+        external
+        pure
+        returns (bool)
+    {
         return interfaceId == type(IERC721).interfaceId;
     }
 

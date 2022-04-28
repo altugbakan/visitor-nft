@@ -16,9 +16,12 @@ contract VisitorTest is Test {
         vm.startPrank(address(1));
         assertEq(visitor.currentTokenId(), 1);
         assertEq(visitor.balanceOf(address(1)), 0);
+        vm.expectRevert(Visitor.InvalidToken.selector);
+        visitor.tokenOf(address(1));
         visitor.mint();
         assertEq(visitor.currentTokenId(), 2);
         assertEq(visitor.balanceOf(address(1)), 1);
+        assertEq(visitor.tokenOf(address(1)), 1);
         vm.stopPrank();
     }
 
