@@ -62,4 +62,14 @@ contract VisitorTest is Test {
 
         assertEq(visitor.tokenURI(tokenId), "");
     }
+
+    function testCannotMintAfterBurning() public {
+        vm.startPrank(address(4));
+
+        visitor.mint();
+        visitor.burn();
+
+        vm.expectRevert(Visitor.AlreadyMinted.selector);
+        visitor.mint();
+    }
 }
