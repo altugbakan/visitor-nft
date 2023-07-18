@@ -10,7 +10,7 @@
 <br />
 
 ## How to Get One
-Simply visit [alt.ug](https://alt.ug) and scroll down to bottom.
+Simply visit [alt.ug](https://alt.ug) with an Ethereum-enabled browser and scroll down to the bottom.
       
 ## Features
 - Created NFTs are [Soulbound](https://vitalik.ca/general/2022/01/26/soulbound.html), meaning you cannot transfer or sell them.
